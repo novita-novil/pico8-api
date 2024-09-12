@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link href="img/icon.png" rel="icon">
-		<title>PICO-8 API</title>
+		<title>PICO-8 API 日本語ドキュメント</title>
 		<link rel="stylesheet" href="css/bootstrap.min.css" media="screen" title="bootstrap" charset="utf-8">
 		<link rel="stylesheet" href="css/highlight/pico8.css">
 		<!-- <link rel="stylesheet" href="css/hljs/p8-default.css"> -->
@@ -100,11 +100,11 @@
 
 			code {
 				font-family: 'Fira Code', monospace;
-				font-size: 10px;
+				font-size: 14px;
 			}
 			pre {
 				font-family: 'Fira Code', monospace;
-				font-size: 11px;
+				font-size: 16px;
 				background: #7E2553;
 				border-color: #7E2553;
 				border-top-width: 0px;
@@ -117,7 +117,7 @@
 			/* Tab Paragraph */
 			.note {
 				display: block;
-				font-size: 14px;
+				font-size: 16px;
 				border-color: #FF77A8;
 			  background:  #1D2B53;
 			  color: #fff1e8;
@@ -127,7 +127,7 @@
 				border: 25%;
 			}
 
-			.note code {background: #1D2B53; color: #FFF1E8; font-size:16px;}
+			.note code {background: #1D2B53; color: #FFF1E8; font-size:18px;}
 
 		</style>
 		<script src="https://use.fontawesome.com/1452dd4c19.js"></script>
@@ -166,31 +166,31 @@
 		<div id="content" class="container api">
 			<!-- HEADER -->
 			<div class="page-header">
-				<h1 style="font-family: Pico8; font-weight: bold; text-align: center;">Pico-8 API Cheatsheet</h1>
+				<h1 style="font-family: Pico8; font-weight: bold; text-align: center;">Pico-8 API チートシート</h1>
 			</div>
 
 			<!-- NAVBAR -->
 			<ul class="nav nav-pills">
 				<!-- class="active" in li -->
 				<li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab"><img src="img/icon.png" height="12em" alt="Welcome"></a></li>
-				<li role="presentation"><a href="#audio" aria-controls="audio" role="tab" data-toggle="tab">Audio</a></li>
-				<li role="presentation"><a href="#cartdata" aria-controls="data" role="tab" data-toggle="tab">Cart Data</a></li>
-				<li role="presentation"><a href="#coroutines" aria-controls="coroutines" role="tab" data-toggle="tab">Coroutines</a></li>
-				<li role="presentation"><a href="#flow" aria-controls="flow" role="tab" data-toggle="tab">Flow Control</a></li>
-				<li role="presentation"><a href="#graphics" aria-controls="graphics" role="tab" data-toggle="tab">Graphics</a></li>
-				<li role="presentation"><a href="#input" aria-controls="input" role="tab" data-toggle="tab">Input</a></li>
-				<li role="presentation"><a href="#map" aria-controls="map" role="tab" data-toggle="tab">Map</a></li>
-				<li role="presentation"><a href="#math" aria-controls="math" role="tab" data-toggle="tab">Math</a></li>
-				<li role="presentation"><a href="#memory" aria-controls="memory" role="tab" data-toggle="tab">Memory</a></li>
-				<li role="presentation"><a href="#operators" aria-controls="memory" role="tab" data-toggle="tab">Operators</a></li>
+				<li role="presentation"><a href="#audio" aria-controls="audio" role="tab" data-toggle="tab">音</a></li>
+				<li role="presentation"><a href="#cartdata" aria-controls="data" role="tab" data-toggle="tab">カートリッジ</a></li>
+				<li role="presentation"><a href="#coroutines" aria-controls="coroutines" role="tab" data-toggle="tab">コルーチン</a></li>
+				<li role="presentation"><a href="#flow" aria-controls="flow" role="tab" data-toggle="tab">基礎構文</a></li>
+				<li role="presentation"><a href="#graphics" aria-controls="graphics" role="tab" data-toggle="tab">グラフィック</a></li>
+				<li role="presentation"><a href="#input" aria-controls="input" role="tab" data-toggle="tab">入力</a></li>
+				<li role="presentation"><a href="#map" aria-controls="map" role="tab" data-toggle="tab">マップ</a></li>
+				<li role="presentation"><a href="#math" aria-controls="math" role="tab" data-toggle="tab">数学</a></li>
+				<li role="presentation"><a href="#memory" aria-controls="memory" role="tab" data-toggle="tab">メモリ</a></li>
+				<li role="presentation"><a href="#operators" aria-controls="memory" role="tab" data-toggle="tab">演算</a></li>
 				<!-- <li role="presentation"><a href="#peekpoke" aria-controls="peekpoke" role="tab" data-toggle="tab">Peek / Poke</a></li> -->
 				<li role="presentation"><a href="#pico8" aria-controls="picocli" role="tab" data-toggle="tab">PICO-8</a></li>
-				<li role="presentation"><a href="#stat" aria-controls="stat" role="tab" data-toggle="tab">Stat</a></li>
-				<li role="presentation"><a href="#strings" aria-controls="strings" role="tab" data-toggle="tab">Strings</a></li>
+				<li role="presentation"><a href="#stat" aria-controls="stat" role="tab" data-toggle="tab">統計データ</a></li>
+				<li role="presentation"><a href="#strings" aria-controls="strings" role="tab" data-toggle="tab">文字列</a></li>
 				<li role="presentation"><a href="#p8scii" aria-controls="p8scii" role="tab" data-toggle="tab">P8SCII</a></li>
 				<li role="presentation"><a href="#lua" aria-controls="lua" role="tab" data-toggle="tab">Lua</a></li>
 				<li role="presentation"><a href="#tables" aria-controls="tables" role="tab" data-toggle="tab">Tables</a></li>
-				<li role="presentation"><a href="#keys" aria-controls="keys" role="tab" data-toggle="tab">Keyboard Shortcuts</a></li>
+				<li role="presentation"><a href="#keys" aria-controls="keys" role="tab" data-toggle="tab">ショートカット</a></li>
 			</ul>
 
 			<div class="tab-content clearfix">
@@ -202,19 +202,19 @@
 					<p class="note">Version <code>0.2.3</code> <br>
 					<!-- <i>Added <b>P8SCII</b> tab, Secret Palette.</i></p> -->
 					<i>Added <code>config</code> section.<br>More to come.</i></p>
-					<h6 class="sub-heading">Commandline Arguments</h6>
+					<h6 class="sub-heading">コマンド起動オプション</h6>
 					<style>.a{font-style: italic; color: #fdcc59; font-weight: 900;}</style>
-					<pre><code class="gml">--  Run Pico-8 from Terminal
+					<pre><code class="gml">--  Pico-8 をターミナルコマンドで起動
 pico-8 [switches] cart.p8
 
--splore                       -- boot in splore mode
--width                  <span class="a">n</span>     -- set the window width
--height                 <span class="a">n</span>     -- set the window height
--windowed               <span class="a">n</span>     -- set windowed mode off (0) or on (1)
--frameless              <span class="a">n</span>     -- run pico-8 in borderless window mode w/ (1); normally w/ (0)
--volume                 <span class="a">n</span>     -- set all audio volume [0..256]
--sound                  <span class="a">n</span>     -- set only sfx volume [0..256]
--music                  <span class="a">n</span>     -- set only music volume [0..256]
+-splore                       -- sploreモードで起動
+-width                  <span class="a">n</span>     -- ウィンドウ幅を指定
+-height                 <span class="a">n</span>     -- ウィンドウ高さを指定
+-windowed               <span class="a">n</span>     -- ウィンドウモード off (0) or on (1)
+-frameless              <span class="a">n</span>     -- 枠なしウィンドウモード on (1) or off[normaly] (0)
+-volume                 <span class="a">n</span>     -- 音量（効果音、ミュージック）設定 [0..256]
+-sound                  <span class="a">n</span>     -- 効果音ボリューム設定 [0..256]
+-music                  <span class="a">n</span>     -- ミュージックボリューム設定 [0..256]
 -joystick               <span class="a">n</span>     -- joystick controls starts at player n (0..7)
 -pixel_perfect          <span class="a">n</span>     -- 1 for unfiltered screen stretching at integer scales
 -preblit_scale          <span class="a">n</span>     -- scale the display by n before blitting to screen
@@ -277,9 +277,9 @@ pico-8 [switches] cart.p8
 				<div role="tabpanel" class="tab-pane fade" id="audio">
 					<p><center><img src="img/keyboard.png" alt="" class="img-responsive"></center></p>
 
-					<h6 class="sub-heading">Audio Manipulation</h6>
-					<pre><code class="lua"><span class="hljs-built_in">music</span>([n, [fade_len, [channel_mask]]]) -- play music; n = -1: stop
-<span class="hljs-built_in">sfx</span>(n, [channel, [offset]]) -- play sfx; n = -1: stop in channel; n = -2: release loop in channel</code></pre>
+					<h6 class="sub-heading">音　Audio Manipulation</h6>
+					<pre><code class="lua"><span class="hljs-built_in">music</span>([n:音源番号, [fade_len:フェードの長さ, [channel_mask:チャンネルマスク]]]) -- ミュージックの再生; n = -1: ストップ
+<span class="hljs-built_in">sfx</span>(n:効果音番号, [channel:チャンネル, [offset:オフセット]]) -- 効果音の再生; n = -1: ストップ; n = -2: ループ再生の解除</code></pre>
 				</div>
 
 				<!-- CART DATA -->
@@ -292,7 +292,7 @@ pico-8 [switches] cart.p8
 
 				<!-- COROUTINES -->
 				<div role="tabpanel" class="tab-pane fade" id="coroutines">
-					<h6 class="sub-heading">Coroutines::<u><a href="http://www.lexaloffle.com/bbs/?tid=3458" target="_blank" style="color: white;">view coroutines thread</a></u></h6>
+					<h6 class="sub-heading">コルーチン::<u><a href="http://www.lexaloffle.com/bbs/?tid=3458" target="_blank" style="color: white;">コルーチンについての公式スレッド</a></u></h6>
 					<pre><code class="lua"><span class="hljs-built_in">cocreate</span>(f) -- returns a coroutine that executes f
 <span class="hljs-built_in">coresume</span>(c) -- resume coroutine c execution
 <span class="hljs-built_in">costatus</span>(c) -- returns true if c is still executing, false otherwise
@@ -304,17 +304,17 @@ pico-8 [switches] cart.p8
 				<!-- FLOW CONTROL -->
 				<div role="tabpanel" class="tab-pane fade" id="flow">
 
-					<h6 class="sub-heading">Execution Flow</h6>
-					<pre><code class="lua">_draw()		-- called once per visible frame
-_init()		-- called once on program startup
-_update()	-- called once per update at 30fps
-_update60()	-- called once per update at 60fps</code></pre>
+					<h6 class="sub-heading">ゲームループ　Execution Flow</h6>
+					<pre><code class="lua">_draw()		-- フレームの書き換えごとに実行
+_init()		-- プログラムの開始時に一度だけ実行
+_update()	-- １秒間に30回(30fps)の間隔で実行
+_update60()	-- １秒間に60回(60fps)の間隔で実行</code></pre>
 
-					<h6 class="sub-heading">Flow Control</h6>
-					<pre><code class="lua">::label:: -- label
-goto label -- jump
+					<h6 class="sub-heading">基礎構文　Flow Control</h6>
+					<pre><code class="lua">::label:: -- ラベル
+goto label -- ラベルへジャンプ
 
-if (&lt;condition&gt;) -- inline if
+if (&lt;condition&gt;) -- if構文のインライン表記
 
 if &lt;condition&gt; then
  -- if block
@@ -323,6 +323,8 @@ elseif &lt;condition&gt; then
 else
  -- else block
 end
+
+hoge = fuga > 12 and "大人料金" or "子供料金" -- Luaには3項演算子がないが、and/orの実行ルールを使って、このように書くことができる
 
 while &lt;condition&gt; do
  -- while block

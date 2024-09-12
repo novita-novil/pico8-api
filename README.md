@@ -1,12 +1,12 @@
 
 ![](https://odd.codes/img/wiki/p8banner.png)
 
-# The UNOFFICIAL PICO-8 API
+# PICO-8 API 非公式ドキュメント
 
 
 *Updated* & unofficial [PICO-8 API](https://www.lexaloffle.com/pico-8.php?page=manual) with a *lovlier* design !
 
-## What is PICO-8 ?
+## PICO-8 とは？
 
 ![jelpi](https://raw.githubusercontent.com/iiviigames/pico8-api/gh-pages/img/p8_jelpi.gif)
 
