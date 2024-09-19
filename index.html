@@ -351,7 +351,7 @@ end</code></pre>
 				<div role="tabpanel" class="tab-pane fade" id="graphics">
 
 
-					<h6 class="sub-heading">PALETTES</h6>
+					<h6 class="sub-heading">PALETTES - カラーパレット</h6>
 						<pre><code class='lua'>
 						<!-- <p><center><img style="border-radius: 5px;" src="img/colors.png" alt="" class="img-responsive"></center></p> -->
 						<div class="imgrow">
@@ -1027,17 +1027,17 @@ The first five bytes (character 0 is never drawn) describes attributes of the fo
 
 				<!-- TABLES -->
 				<div role="tabpanel" class="tab-pane fade" id="tables">
-					<h6 class="sub-heading">Table Functions</h6>
-					<pre><code class="lua"><span class="hljs-built_in">add</span>(t, v) -- add v to t
-<span class="hljs-built_in">all</span>(t) -- used in 'for v in all(t)' loops
-<span class="hljs-built_in">count</span>(t) -- returns number of elements in the table
-<span class="hljs-built_in">del</span>(t, v) -- delete first instance of v in t
-<span class="hljs-built_in">foreach</span>(t, f) -- call f() for each v in t
-ipairs(t) -- loops through a numerically indexed table; for _, v in ipairs(t) do end
-pairs(t) -- loops through string indexed tables; for k,v in pairs(t) do end
-<span class="hljs-built_in">pack</span>(...) -- adds any number of arguments into a table and returns the table
+					<h6 class="sub-heading">Table Functions - PICO-8独自テーブル関数</h6>
+					<pre><code class="lua"><span class="hljs-built_in">add</span>(t, v) -- v をテーブル t  に追加
+<span class="hljs-built_in">all</span>(t) -- 'for v in all(t)' のようにforループで使う
+<span class="hljs-built_in">count</span>(t) -- テーブルの要素数を返す
+<span class="hljs-built_in">del</span>(t, v) -- テーブルtの最初のvのインスタンスを削除
+<span class="hljs-built_in">foreach</span>(t, f) -- テーブルtのそれぞれの要素vについて、f()関数を実行
+ipairs(t) -- 数値インデックスのテーブルをforループで処理 for _, v in ipairs(t) do end
+pairs(t) -- 文字列インデックスのテーブルをforループで処理 for k,v in pairs(t) do end
+<span class="hljs-built_in">pack</span>(...) -- 複数の要素をテーブルに結合し、、追加されたテーブルを返す
 unpack(t, [i], [j]) -- returns all entries in a table as arguments
-<span class="hljs-built_in">rnd</span>(t) -- returns a random value from a table
+<span class="hljs-built_in">rnd</span>(t) -- テーブルからランダムに要素を取り出す
 </code></pre>
 
 					<h6 class="sub-heading">Metatables::<u><a href="http://www.lexaloffle.com/bbs/?tid=3342" target="_blank" >view metatables thread</a></u></h6>
@@ -1114,22 +1114,22 @@ function mt.__le(a, b) return a <= b end</code></pre>
 					<div class="row">
 						<!-- KEYS_0 -->
 						<div class="col-md-6">
-							<h5><u>General</u></h5>
+							<h5><u>全般</u></h5>
 							<dl class="dl-horizontal">
-								<dt><strong>fullscreen</strong>:</dt> <dd><kbd>alt + enter</kbd> / <kbd>cmd + f</kbd></dd>
-								<dt><strong>quit</strong>:</dt> <dd><kbd>alt + f4</kbd> / <kbd>cmd + q</kbd></dd>
-								<dt><strong>reload and run</strong>:</dt> <dd><kbd>ctrl + r</kbd></dd>
-								<dt><strong>save</strong>:</dt> <dd><kbd>ctrl + s</kbd></dd>
-								<dt><strong>cpu graph</strong>:</dt> <dd><kbd>ctrl + p</kbd></dd>
-								<dt><strong>mute / unmute</strong>:</dt> <dd><kbd>ctrl + m</kbd></dd>
-								<dt><strong>show fps</strong>:</dt> <dd><kbd>ctrl + 1</kbd></dd>
-								<dt><strong>screenshot</strong>:</dt> <dd><kbd>ctrl + 6</kbd> / <kbd>f6</kbd> / <kbd>f1</kbd></dd>
-								<dt><strong>cart img</strong>:</dt> <dd><kbd>ctrl + 7</kbd> / <kbd>f7</kbd> / <kbd>f2</kbd></dd>
-								<dt><strong>start video</strong>:</dt> <dd><kbd>ctrl + 8</kbd> / <kbd>f8</kbd> / <kbd>f3</kbd></dd>
-								<dt><strong>save video</strong>:</dt> <dd><kbd>ctrl + 9</kbd> / <kbd>f9</kbd> / <kbd>f4</kbd></dd>
-								<dt><strong>keyboard cursor</strong>:</dt> <dd><kbd>f10</kbd></dd>
-								<dt><strong>navigate editors</strong>:</dt> <dd><kbd>alt + right</kbd> / <kbd>alt + left</kbd></dd>
-								<dt><strong>cli completion</strong>:</dt> <dd><kbd>tab</kbd></dd>
+								<dt><strong>フルスクリーン</strong>:</dt> <dd><kbd>alt + enter</kbd> / <kbd>cmd + f</kbd></dd>
+								<dt><strong>シャットダウン</strong>:</dt> <dd><kbd>alt + f4</kbd> / <kbd>cmd + q</kbd></dd>
+								<dt><strong>リロードして実行</strong>:</dt> <dd><kbd>ctrl + r</kbd></dd>
+								<dt><strong>保存</strong>:</dt> <dd><kbd>ctrl + s</kbd></dd>
+								<dt><strong>cpu統計情報</strong>:</dt> <dd><kbd>ctrl + p</kbd></dd>
+								<dt><strong>ミュート / アンミュート</strong>:</dt> <dd><kbd>ctrl + m</kbd></dd>
+								<dt><strong>fps表示</strong>:</dt> <dd><kbd>ctrl + 1</kbd></dd>
+								<dt><strong>スクリーンショット</strong>:</dt> <dd><kbd>ctrl + 6</kbd> / <kbd>f6</kbd> / <kbd>f1</kbd></dd>
+								<dt><strong>カートリッジイメージの保存</strong>:</dt> <dd><kbd>ctrl + 7</kbd> / <kbd>f7</kbd> / <kbd>f2</kbd></dd>
+								<dt><strong>録画スタート</strong>:</dt> <dd><kbd>ctrl + 8</kbd> / <kbd>f8</kbd> / <kbd>f3</kbd></dd>
+								<dt><strong>録画の保存</strong>:</dt> <dd><kbd>ctrl + 9</kbd> / <kbd>f9</kbd> / <kbd>f4</kbd></dd>
+								<dt><strong>キーボードカーソル</strong>:</dt> <dd><kbd>f10</kbd></dd>
+								<dt><strong>エディタモードの切替</strong>:</dt> <dd><kbd>alt + right</kbd> / <kbd>alt + left</kbd></dd>
+								<dt><strong>コマンドライン補完</strong>:</dt> <dd><kbd>tab</kbd></dd>
 							</dl>
 
 							<h5><u>Splore</u></h5>
